@@ -1,0 +1,7 @@
+version: "3"
+
+tasks:
+  build-server:
+    cmds:
+      # - npm --prefix ./clientx run build
+      - node -e "fs=require('fs');path=require('path');src='./clientx/out';dest='./server/public/';fs.cpSync(src,dest,{recursive:true});"
